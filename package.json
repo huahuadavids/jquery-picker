@@ -1,0 +1,20 @@
+{
+  "name": "simple-picker",
+  "version": "1.0.0",
+  "description": "a simple date picker like native ios",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huahuadavids/simple-picker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huahuadavids/simple-picker/issues"
+  },
+  "homepage": "https://github.com/huahuadavids/simple-picker#readme"
+}
