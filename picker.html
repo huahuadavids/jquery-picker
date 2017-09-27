@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-control" content="no-cache">
+  <meta http-equiv="Cache" content="no-cache">
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+  <link rel="stylesheet" href="./assets/widgets.css">
+  <title>Picker</title>
+</head>
+<body style="background: #fff;">
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  .wg-avatar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 600px;
+    height: auto;
+    padding: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+  .header {
+    height: 104px;
+    width: 100%;
+    position: relative;
+  }
+
+  .headerCont {
+    width: 100%;
+    height: 104px;
+    background: #212121;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+  }
+
+  .headerContBox {
+    padding: 0 32px;
+    position: relative;
+  }
+
+  .headerContBox .back {
+    width: 56px;
+    height: 56px;
+    padding: 16px;
+    border-radius: 44px;
+    position: absolute;
+    left: 32px;
+    top: 8px;
+  }
+
+  .headerContBox .back:active {
+    background: rgba(255, 255, 255, 0.16)
+  }
+
+  .headerTitle {
+    width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .headerTitle h1 {
+    font-size: 36px;
+    color: #ffffff;
+    line-height: 104px;
+    text-align: center;
+    font-weight: normal;
+  }
+
+  .demo-demo {
+    overflow: hidden;
+    padding: 20px;
+  }
+
+  .wg-list {
+    width: 100%;
+    height: 120px;
+    background: #f2f2f2;
+    margin-bottom: 8px;
+  }
+
+  .wg-list .wg-list-box {
+    padding: 0px 32px;
+  }
+
+  .wg-list .wg-list-box div {
+    float: left;
+    padding: 25px 0;
+  }
+
+  .wg-list .wg-list-box a {
+    line-height: 42px;
+    font-size: 28px;
+    color: #222;
+    display: block;
+    max-width: 500px;
+  }
+
+  .wg-list .wg-list-box p {
+    color: #999999;
+    line-height: 28px;
+    font-size: 20px;
+  }
+
+  .wg-list i {
+    width: 56px;
+    height: 56px;
+    margin-top: 32px;
+    display: block;
+    float: right;
+  }
+
+  .wg-picker-timezone-section, .wg-picker-week-section {
+    margin-left: auto;
+    margin-right: auto;
+    width: 872px;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #222;
+    padding: 30px 20px 10px;
+  }
+</style>
+<div class="header">
+  <div class="headerCont">
+    <div class="headerContBox">
+      <a class="back" onclick="history.go(-1)"><img class="wg-avatar-img" src="../img/ic_back.png" alt=""></a>
+      <div class="headerTitle"><h1>Picker</h1></div>
+    </div>
+  </div>
+</div>
+<h2 style="">自定义-timezone</h2>
+<p style="padding:0px 20px 20px; font-size:20px; color:#999;"></p>
+<div class="wg-avatar-container">
+
+  <div class="wg-picker-timezone-section">
+    <div class="wg-picker-wrapper">
+      <div class="wg-picker-title">时区选择</div>
+      <div class="wg-picker-close">
+        <img src="./assets/close.png" alt="close">
+      </div>
+      <div class="wg-picker-confirm">确定</div>
+      <div class="wg-picker-lists">
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>week</h2>
+<p style="padding:0px 20px 20px; font-size:20px; color:#999;"></p>
+<div class="wg-avatar-container">
+  <div class="wg-picker-week-section">
+    <div class="wg-picker-wrapper">
+      <div class="wg-picker-title">星期选择</div>
+      <div class="wg-picker-close">
+        <img src="./assets/close.png" alt="close">
+      </div>
+      <div class="wg-picker-confirm">确定</div>
+      <div class="wg-picker-lists">
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Time Picker</h2>
+<p style="padding:0px 20px 20px; font-size:20px; color:#999;"></p>
+<div class="wg-avatar-container">
+  <div class="wg-picker-time-section">
+    <div class="wg-picker-wrapper">
+      <div class="wg-picker-title">时间选择</div>
+      <div class="wg-picker-close">
+        <img src="./assets/close.png" alt="close">
+      </div>
+      <div class="wg-picker-confirm">确定</div>
+      <div class="wg-picker-lists">
+        <div class="wg-picker-list wg-picker-list1" data-type="noon"></div>
+        <div class="wg-picker-list wg-picker-list2" data-type="hour"></div>
+        <div class="wg-picker-list wg-picker-list3" data-type="minute"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Date Picker</h2>
+<p style="padding:0px 20px 20px; font-size:20px; color:#999;"></p>
+<div class="wg-avatar-container">
+  <div class="wg-picker-date-section">
+    <div class="wg-picker-wrapper">
+      <div class="wg-picker-title">日期选择</div>
+      <div class="wg-picker-close">
+        <img src="./assets/close.png" alt="close">
+      </div>
+      <div class="wg-picker-confirm">确定</div>
+      <div class="wg-picker-lists">
+        <div class="wg-picker-list wg-picker-list1" data-type="year"></div>
+        <div class="wg-picker-list wg-picker-list2" data-type="month"></div>
+        <div class="wg-picker-list wg-picker-list3" data-type="day"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./assets/jquery-2.1.4.min.js"></script>
+<script src="./assets/jquery.picker.js"></script>
+<script>
+  var lineStyles = [
+    {'height': 24, 'top': 0, 'fontSize': 24, 'color': 'rgba(255,255,255,0.56)'},
+    {'height': 76, 'top': 24, 'fontSize': 28, 'color': 'rgba(255,255,255,0.56)'},
+    {'height': 116, 'top': 100, 'fontSize': 36, 'color': '#4bd6b3'},
+    {'height': 76, 'top': 216, 'fontSize': 28, 'color': 'rgba(255,255,255,0.56)'},
+    {'height': 24, 'top': 292, 'fontSize': 24, 'color': 'rgba(255,255,255,0.56)'}
+  ];
+  $(".wg-picker-timezone-section .wg-picker-lists").wgPicker({
+    type: 'custom',
+    content: lineStyles,
+    data: [
+      'GMT+6:00 新德里', 'GMT+7:00 新西伯利亚', 'GMT+8:00 北京', 'GMT+9:00 首尔', 'GMT+10:00 悉尼'
+    ],
+    setValue: 'GMT+8:00 北京'
+  });
+
+  $(".wg-picker-week-section .wg-picker-lists").wgPicker({
+    type: 'week',
+    content: lineStyles
+  });
+  if($(".wg-picker-time-section").length){
+    $(".wg-picker-time-section .wg-picker-list").each(function (index, dom) {
+      $(dom).wgPicker({
+        type: $(dom).attr("data-type"),
+        content: lineStyles
+      })
+    })
+  }
+
+  $(".wg-picker-date-section .wg-picker-list1").wgPicker({
+    type: 'year',
+    content: lineStyles,
+    yearGap: [10,10]
+  });
+  $(".wg-picker-date-section .wg-picker-list2").wgPicker({
+    type: 'month',
+    content: lineStyles
+  });
+  $(".wg-picker-date-section .wg-picker-list3").wgPicker({
+    type: 'day',
+    content: lineStyles
+  });
+
+  setInterval(function(){
+    if(window.wgPickerShouldUpdateValue){
+      var year = $(".wg-picker-date-section .wg-picker-list1").attr("data-value");
+      var month = $(".wg-picker-date-section .wg-picker-list2").attr("data-value");
+        $(".wg-picker-date-section .wg-picker-list3").html("").wgPicker({
+        type: 'day',
+        content: lineStyles,
+        setDay:[year,month]
+      });
+      window.wgPickerShouldUpdateValue = false;
+    }
+  },400)
+
+</script>
+
+</body>
+</html>
